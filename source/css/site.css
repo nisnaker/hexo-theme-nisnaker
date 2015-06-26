@@ -1,0 +1,140 @@
+*{padding:0;margin:0}fieldset,img,html,body,iframe{border:0}table{border-collapse:collapse;border-spacing:0}li{list-style:none}h1,h2,h3,h4,h5,h6{font-weight:bold;font-size:100%}em,strong{font-weight:bold;font-style:normal}body,textarea,select,input{font-family:"Hiragino Sans GB","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,arial,simsun,\5B8B\4F53;font-size:12px;color:#444}a{color:#333;outline:0;star:expression(this.onFocus=this.blur())}blockquote{padding:0 0 0 15px;margin:10px 0;border-left:3px solid #dfdfdf;color:#999}.clear:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}.clear{zoom:1}.thide{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;word-break:keep-all}.shadow{box-shadow:0 0 6px rgba(0,0,0,0.2);-moz-box-shadow:0 0 6px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 6px rgba(0,0,0,0.2)}
+
+body {
+	background-image: url("/imgs/bg.png");
+}
+
+a:hover {
+	color: #E84893;
+	cursor: auto;
+}
+
+h2 {
+	font-size: 20px;
+	padding: 20px 20px 0;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+
+h2 a {
+	text-decoration: none;
+}
+
+p {
+	margin-bottom: 10px;
+}
+
+::selection {
+  color: #fff;
+  background: #E84893;
+  text-shadow: none;
+}
+
+/* width */
+
+.header .headercnt, .container, .footer .footwrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.container .main {
+	float: left;
+	width: 760px;
+}
+
+.container .side {
+	float: right;
+	width: 220px;
+}
+
+/* header */
+
+.header, .footer {
+	width: 100%;
+	background-color: #fff;
+	z-index: 1;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	opacity: .9;
+	padding: 24px 0;
+}
+
+.header h1 {
+	float: left;
+	font-size: 26px;
+	color: #333;
+}
+
+.header a {
+	text-decoration: none;
+}
+
+.header ul {
+	float: right;
+	margin: 10px 0;
+}
+
+.header ul li {
+	display: inline-block;
+	color: #888;
+	margin-left: 24px;
+}
+
+/* footer */
+.footer {
+	padding: 20px 0;
+}
+.footer span {
+	float: right;
+}
+
+/* main */
+
+.container {
+	margin-top: 140px;
+}
+
+.post {
+	margin-bottom: 20px;
+	background-color: #fff;
+}
+
+.post .text {
+	margin: 20px;
+}
+
+.postfoot {
+	padding: 10px 20px;
+	background-color: #f8f8f8;
+	border-top: 1px solid #e7e7e7;
+}
+
+.postfoot, .postfoot a {
+	color: #aaa;
+}
+
+.postfoot a:hover {
+	color: #E84893;
+}
+
+/* pagination */
+
+.pagination {
+	background-color: #fff;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.pagination span, .pagination a {
+	display: inline-block;
+	padding: 10px;
+}
+
+.comments {
+	padding: 20px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}

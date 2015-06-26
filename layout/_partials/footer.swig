@@ -1,0 +1,27 @@
+<div class="footer shadow">
+	<div class="footwrap">
+		&copy; {{ config.author }}
+		{% if config.email %}
+		( {{ config.email }} )
+		<span>
+			Powered by <a target="_blank" href="http://hexo.io">Hexo</a> | Theme by <a href="https://github.com/nisnaker/hexo-theme-nisnaker" target="_blank">Nisnaker</a>
+		</span>
+	</div>
+</div>
+
+{% if theme.google_analytics %}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{ theme.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endif %}
+
+{% if theme.fancybox %}
+<script type="text/javascript" src="{{ url_for(theme.js) }}/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="{{ url_for(theme.js) }}/jquery.fancybox.pack.js?v=2.1.5"></script>
+{% endif %}

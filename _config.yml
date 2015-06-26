@@ -1,0 +1,22 @@
+menu:
+  home: /
+  # categories: /categories
+  # about: /about
+  archives: /archives
+  # tags: /tags
+
+# Fancybox
+fancybox: true
+
+# Static files
+vendors: vendors
+css: css
+js: js
+images: images
+
+since: 2015
+
+google_site_verification:
+google_analytics:
+
+version: 0.1
