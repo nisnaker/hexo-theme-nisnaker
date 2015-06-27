@@ -1,3 +1,3 @@
-<div class="sidewrap shadow">
-	{{ config.author }}
-</div>
+{% import '../_macro/sidebar.swig' as side %}
+
+{{ side.render(false) }}

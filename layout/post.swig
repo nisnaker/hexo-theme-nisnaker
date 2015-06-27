@@ -3,7 +3,7 @@
 {% block title %}{{ page.title }} // {{ config.title }}{% endblock %}
 
 {% block main %}
-<div class="post shadow">
+<div class="post shadowbox">
 	<h2><a href="{{ url_for(page.path) }}">{{ page.title }}</a></h2>
 	<div class="text">
 		{{ page.content }}
@@ -29,8 +29,9 @@
 	</div>
 </div>
 
+
 {% if page.comments and config.duoshuo_shortname %}
-<div class="comments shadow">
+<div class="comments shadowbox">
 	<div class="ds-thread" data-thread-key="{{ page.path }}" date-title="{{ page.title }}" data-url="{{ page.permalink }}"></div>
 </div>
 <script type="text/javascript">
@@ -46,4 +47,11 @@ var duoshuoQuery = {short_name:"{{ config.duoshuo_shortname }}"};
 </script>
 {% endif %}
 
+{% endblock %}
+
+
+{% import '_macro/sidebar.swig' as side %}
+
+{% block sidebar %}
+{{ side.render(true) }}
 {% endblock %}

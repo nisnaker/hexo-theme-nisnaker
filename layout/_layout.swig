@@ -13,7 +13,9 @@
 			{% block main %}{% endblock %}
 		</div>
 		<div class="side">
+			{% block sidebar %}
 			{% include '_partials/sidebar.swig' %}
+			{% endblock %}
 		</div>
 	</div>
 	{% include '_partials/footer.swig' %}

@@ -4,7 +4,7 @@
 
 {% block main %}
 {% for post in page.posts %}
-<div class="shadow post">
+<div class="shadowbox post">
 	<h2><a href="{{ url_for(post.path) }}">{{ post.title }}</a></h2>
 	<div class="text">
 		{% if post.description %}

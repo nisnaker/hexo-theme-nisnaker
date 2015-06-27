@@ -12,7 +12,7 @@ fancybox: true
 vendors: vendors
 css: css
 js: js
-images: images
+img: img
 
 since: 2015
 

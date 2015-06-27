@@ -4,21 +4,23 @@
 {% block title %}{{ __('menu.archives') }} // {{ config.title }}{% endblock %}
 
 {% block main %}
-<div class="archive">
-{% for post in site.posts %}
+<div class="archive shadowbox">
+{% for post in page.posts.sort('-date') %}
 	{% set year_month %}
 	{% set post.year_month = date(post.date, 'YYYY-MM') %}
 
-	{% if post.yead_month !== year_month %}
+	{% if post.year_month !== year_month %}
 		{% set year_month = post.year_month %}
-		<div class="archive-date">
+		<h2 class="archive-date">
 			{{ year_month }}
-		</div>
-
-		{{ post_template.render(post) }}
+		</h2>
 	{% endif %}
+
+	{{ post_template.render(post) }}
 {% endfor %}
 
-{% include '_partials/pagination.swig' %}
 </div>
+
+{% include '_partials/pagination.swig' %}
+
 {% endblock %}

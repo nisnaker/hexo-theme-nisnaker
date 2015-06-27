@@ -9,3 +9,11 @@ menu:
 post:
   cate: 分类
   tag: 标签
+
+side:
+  recent: 最新文章
+  cates: 分类
+  search: 搜索
+  search_holder: 输入关键字...
+  toc: 文章目录
+  notoc: 此文章不包含目录
