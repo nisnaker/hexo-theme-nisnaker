@@ -4,7 +4,7 @@
 
 {% block main %}
 <div class="post shadowbox">
-	<h2><a href="{{ url_for(page.path) }}">{{ page.title }}</a></h2>
+	<h2 class="title"><a href="{{ url_for(page.path) }}">{{ page.title }}</a></h2>
 	<div class="text">
 		{{ page.content }}
 	</div>

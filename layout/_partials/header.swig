@@ -1,5 +1,5 @@
 <div class="header shadow">
-	<div class="headercnt">
+	<div class="headercnt clear">
 		<h1><a href="{{ config.root }}">{{ config.title }}</a></h1>
 		
 		{% if theme.menu %}

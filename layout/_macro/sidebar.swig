@@ -32,7 +32,7 @@
 	{% if toc.length === 0 %}
 	<dd>{{ __('side.notoc') }}</dd>
 	{% else %}
-	<dd>{{ toc }}</dd>
+	{{ toc }}
 	{% endif %}
 </dl>
 
