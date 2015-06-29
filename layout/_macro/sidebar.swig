@@ -1,6 +1,10 @@
 {% macro render(is_post) %}
 
 <dl class="shadowbox">
+	<img src="{{ url_for(theme.img) }}/flypig.jpg" style="width:220px;height:220px;">
+</dl>
+
+<dl class="shadowbox">
 	<dt>{{ __('side.search') }}</dt>
 	<dd>
 		<form action="//google.com/search" accept-charset="utf-8" target="_blank">
@@ -18,7 +22,7 @@
 	{% endfor %}
 </dl>
 
-<dl class="shadowbox">
+<dl class="shadowbox cate">
 	<dt>{{ __('side.cates') }}</dt>
 		{% for cate in site.categories.sort('name') %}
 		<dd><a href="{{ url_for(cate.path) }}">{{ cate.name }} ({{ cate.posts.length }})</a></dd>
@@ -27,8 +31,9 @@
 
 {% if is_post %}
 {% set toc = toc(page.content, {"class": "nav", list_number: true}) %}
-<dl class="shadowbox toc toc-flow">
+<dl class="shadowbox toc">
 	<dt>{{ __('side.toc') }}</dt>
+	<div class="progress"></div>
 	{% if toc.length === 0 %}
 	<dd>{{ __('side.notoc') }}</dd>
 	{% else %}
@@ -37,10 +42,5 @@
 </dl>
 
 {% endif %}
-
-<dl class="shadowbox">
-	<img src="{{ url_for(theme.img) }}/flypig.jpg">
-</dl>
-
 
 {% endmacro %}

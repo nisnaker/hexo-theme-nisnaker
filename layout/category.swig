@@ -5,7 +5,7 @@
 
 {% block main %}
 <div class="shadowbox cate-title">
-	<h2>{{ __('post.cate') }} : {{ page.category }}</h2>
+	<h2 class="title">{{ __('post.cate') }} : {{ page.category }}</h2>
 </div>
 
 <div class="archive shadowbox">

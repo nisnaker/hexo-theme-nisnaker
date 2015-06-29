@@ -1,4 +1,4 @@
-*{padding:0;margin:0}fieldset,img,html,body,iframe{border:0}table{border-collapse:collapse;border-spacing:0}h1,h2,h3,h4,h5,h6{font-weight:bold;font-size:100%}em,strong{font-weight:bold;font-style:normal}body,textarea,select,input{font-family:"Hiragino Sans GB","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,arial,simsun,\5B8B\4F53;font-size:12px;color:#444}a{color:#333;outline:0;star:expression(this.onFocus=this.blur())}blockquote{padding:0 0 0 15px;margin:10px 0;border-left:3px solid #dfdfdf;color:#999}.clear:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}.clear{zoom:1}.thide{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;word-break:keep-all}
+*{padding:0;margin:0}fieldset,img,html,body,iframe{border:0}table{border-collapse:collapse;border-spacing:0}h1,h2,h3,h4,h5,h6{font-weight:bold;font-size:100%}em,strong{font-weight:bold;font-style:normal}body,textarea,select,input{font-family:"Hiragino Sans GB","Microsoft YaHei",\5FAE\8F6F\96C5\9ED1,tahoma,arial,simsun,\5B8B\4F53;font-size:12px;color:#444}blockquote{padding:0 0 0 15px;margin:10px 0;border-left:3px solid #dfdfdf;color:#999}.clear:after{clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:"."}.clear{zoom:1}.thide{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;word-break:keep-all}
 
 /*li{list-style:none}*/
 
@@ -6,9 +6,22 @@ body {
 	background-image: url("/img/bg.png");
 }
 
+a{
+	text-decoration: none;
+	border-bottom: 1px solid #bbb;
+	color:#333;
+	outline:0;
+	star:expression(this.onFocus=this.blur());
+}
+
+a.fancybox, a.fancybox-close {
+	border-bottom: none;
+}
+
 a:hover {
 	color: #E84893;
 	cursor: auto;
+	border-bottom-color: #E84893;
 }
 
 ::selection {
@@ -77,7 +90,7 @@ a:hover {
 }
 
 .header a {
-	text-decoration: none;
+	border-bottom: none;
 }
 
 .header ul {
@@ -101,7 +114,18 @@ a:hover {
 
 /* main */
 
-.post .text {
+.main h2.title {
+	font-size: 20px;
+	padding: 20px;
+	font-weight: normal;
+	border-bottom: 1px solid #eee;
+}
+
+.main h2.title a {
+	border-bottom: none;
+}
+
+.text {
 	margin: 20px;
 }
 
@@ -117,119 +141,6 @@ a:hover {
 
 .postfoot a:hover {
 	color: #E84893;
-}
-
-/* pagination */
-
-.pagination {
-	text-align: center;
-}
-
-.pagination span, .pagination a {
-	display: inline-block;
-	padding: 10px;
-}
-
-.comments {
-	padding: 20px;
-}
-
-/* archive */
-.archive {
-	position: relative;
-	padding: 20px;
-	padding-left: 50px;
-}
-
-.archive::after {
-	content: ' ';
-	position: absolute;
-	top: 0;
-	width: 4px;
-	height: 100%;
-	background-color: #f5f5f5;
-	left: 50px;
-}
-
-.archive h2 {
-	padding: 0;
-	padding-left: 20px;
-	margin-top: 20px;
-}
-
-.archive-date, .archive-title {
-	margin-left: 5px;
-	margin-bottom: 15px;
-	position: relative;
-	padding-left: 50px;
-}
-
-.archive-date::before, .archive-title::before {
-	position: absolute;
-	content: ' ';
-	width: 6px;
-	height: 6px;
-	background-color: #bbb;
-	border-radius: 50%;
-	left: -6px;
-	top: 6px;
-	z-index: 1;
-}
-
-.archive-date::before {
-	top: 13px;
-}
-
-.archive-date:hover::before, .archive-title:hover::before {
-	background-color: #333;
-}
-
-.archive-title {
-	border-bottom: 1px dashed #ccc;
-}
-
-.archive-title:hover {
-	border-bottom: 1px dashed #333;
-}
-
-/* sidebar */
-.side dt {
-	font-size: 14px;
-	padding: 10px;
-	border-bottom: 1px solid #eee;
-}
-
-.side dd {
-	padding: 5px 10px;
-}
-
-.side ol {
-	padding-left: 10px;
-}
-
-.side ol.nav {
-	padding: 10px 0 10px 10px;
-}
-
-.side ol li {
-	list-style: none;
-}
-
-.side input {
-	width: 100%;
-}
-
-/* post */
-
-.post h2.title {
-	font-size: 20px;
-	padding: 20px;
-	font-weight: normal;
-	border-bottom: 1px solid #eee;
-}
-
-.post h2.title a {
-	text-decoration: none;
 }
 
 .text p, .text .highlight, .text ul, .text ol {
@@ -286,6 +197,13 @@ a:hover {
 	max-width: 720px;
 }
 
+.text .imgalt {
+	display: block;
+	color: #999;
+	font-size: .9em;
+	padding-left: 20px;
+}
+
 .text > table {
 	max-width: 720px;
 	margin: 10px 0;
@@ -305,8 +223,178 @@ a:hover {
 	background-color: #eee;
 }
 
+/* pagination */
+
+.pagination {
+	text-align: center;
+}
+
+.pagination span, .pagination a {
+	display: inline-block;
+	padding: 10px;
+}
+
+.comments {
+	padding: 20px;
+}
+
+/* archive */
+
+.archive {
+	position: relative;
+	padding: 20px;
+	padding-left: 50px;
+}
+
+.archive::after {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	width: 4px;
+	height: 100%;
+	background-color: #f5f5f5;
+	left: 50px;
+}
+
+.archive h2 {
+	padding: 0;
+	padding-left: 20px;
+	margin-top: 20px;
+}
+
+.archive-date, .archive-title {
+	margin-left: 5px;
+	margin-bottom: 15px;
+	position: relative;
+	padding-left: 30px;
+}
+
+.archive-date::before, .archive-title::before {
+	position: absolute;
+	content: ' ';
+	width: 6px;
+	height: 6px;
+	background-color: #bbb;
+	border-radius: 50%;
+	left: -6px;
+	top: 6px;
+	z-index: 1;
+}
+
+.archive-date::before {
+	top: 13px;
+}
+
+.archive-date:hover::before, .archive-title:hover::before {
+	background-color: #333;
+}
+
+.archive-title {
+	border-bottom: 1px dashed #ccc;
+}
+
+.archive-title:hover {
+	border-bottom: 1px dashed #333;
+}
+
+/* sidebar */
+
+.side dt {
+	font-size: 14px;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+}
+
+.side dd {
+	padding: 5px 10px;
+}
+
+.side ol {
+	padding-left: 10px;
+}
+
+.side ol.nav {
+	padding: 10px;
+}
+
+.side ol li {
+	list-style: none;
+}
+
+.side input {
+	width: 100%;
+}
+
+/* code */
+
+pre .comment {
+  color: #8e908c;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #c82829;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #f5871f;
+}
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #718c00;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #718c00;
+}
+pre .title,
+pre .css .hexcolor {
+  color: #3e999f;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #4271ae;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #8959a8;
+}
 
 /* other */
 .tag-title h2, .cate-title h2 {
 	padding-bottom: 20px;
+}
+
+div.progress {
+	background-color: #E84893;
+	height: 2px;
+}
+
+.toc-fixed {
+	position: fixed;
+	top: 20px;
+	width: 220px;
 }
