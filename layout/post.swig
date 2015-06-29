@@ -54,4 +54,5 @@ var duoshuoQuery = {short_name:"{{ config.duoshuo_shortname }}"};
 
 {% block sidebar %}
 {{ side.render(true) }}
+
 {% endblock %}

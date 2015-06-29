@@ -1,8 +1,15 @@
 {% macro render(is_post) %}
 
+{% if is_post %}
+<dl class="shadowbox">
+	<dt>{{ __('side.qrcode') }}</dt>
+	<dd class="qrcode"></dd>
+</dl>
+{% else %}
 <dl class="shadowbox">
 	<img src="{{ url_for(theme.img) }}/flypig.jpg" style="width:220px;height:220px;">
 </dl>
+{% endif %}
 
 <dl class="shadowbox">
 	<dt>{{ __('side.search') }}</dt>

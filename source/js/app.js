@@ -22,16 +22,16 @@ $(function () {
 	});
 });
 
+// fancybox
 $(function () {
 	if(! $.fancybox) return;
 
 	$('.text').each(function(i){
-		console.log(i)
 		$(this).find('img').each(function () {
 			var alt = this.alt;
 
 			if(alt){
-				$(this).after('<span class="imgalt">'+alt+'</span>')
+				// $(this).after('<span class="imgalt">'+alt+'</span>')
 			}
 
 			$(this).wrap('<a href="'+this.src+'" title="'+alt+'" class="fancybox" rel="gallery'+i+'" />')
@@ -47,4 +47,22 @@ $(function () {
 			}
 		}
 	});
+});
+
+// qrcode
+$(function () {
+	var qrcode = $('.qrcode');
+	if(! qrcode.length) return;
+
+	qrcode.qrcode({
+		text: window.location.href,
+		render: 'canvas',
+		width: 200,
+		height: 200,
+		typeNumber: -1,
+		correctLevel: QRErrorCorrectLevel.H,//纠错等级
+		background: '#fff',
+		foreground: '#E8A9C7'
+	});
+	
 });

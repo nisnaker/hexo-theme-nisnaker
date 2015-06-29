@@ -25,4 +25,6 @@
 {% if theme.fancybox %}
 <script type="text/javascript" src="{{ url_for(theme.js) }}/jquery.fancybox.pack.js"></script>
 {% endif %}
+<script type="text/javascript" src="{{ url_for('js') }}/jquery.qrcode.js"></script>
+<script type="text/javascript" src="{{ url_for('js') }}/qrcode.js"></script>
 <script type="text/javascript" src="{{ url_for(theme.js) }}/app.js?v={{ theme.version }}"></script>	
