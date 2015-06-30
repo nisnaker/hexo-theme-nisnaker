@@ -53,7 +53,7 @@ $(function () {
 $(function () {
 	var qrcode = $('.qrcode');
 	if(! qrcode.length) return;
-	if(! $.qrcode) return;
+	if(! qrcode.qrcode) return;
 	
 	qrcode.qrcode({
 		text: window.location.href,
