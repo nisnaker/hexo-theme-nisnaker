@@ -1,6 +1,6 @@
 {% macro render(is_post) %}
 
-{% if is_post %}
+{% if is_post and theme.qrcode %}
 <dl class="shadowbox qrcodebox">
 	<dt>{{ __('side.qrcode') }}</dt>
 	<dd class="qrcode"></dd>

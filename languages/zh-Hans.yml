@@ -1,10 +1,6 @@
 menu:
   home: 首页
   archives: 归档
-  categories: 分类
-  tags: 标签
-  about: 关于
-  commonweal: 公益404
 
 post:
   cate: 分类

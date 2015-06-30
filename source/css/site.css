@@ -419,7 +419,7 @@ div.progress {
 
 
 @media (max-width: 768px) {
-	.header .headercnt, .container, .footer .footwrap {
+	.header .headercnt, .container, .container .main, .footer .footwrap {
 		width: 100%;
 	}
 
@@ -427,16 +427,7 @@ div.progress {
 		padding-left: 20px;
 	}
 
-	.header ul {
-		padding-right: 20px;
-	}
-
-	.container .main, .container .side {
-		width: 100%;
-		margin: 0;
-	}
-
-	.side .qrcodebox, .side .toc{
+	.side , .menu{
 		display: none;
 	}
 
