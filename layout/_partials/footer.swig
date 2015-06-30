@@ -1,9 +1,12 @@
 <div class="footer shadow">
 	<div class="footwrap">
+		<span class="author">
 		&copy; {{ config.author }}
 		{% if config.email %}
 		( {{ config.email }} )
-		<span>
+		</span>
+		<br />
+		<span class="power">
 			Powered by <a target="_blank" href="http://hexo.io">Hexo</a> | Theme by <a href="https://github.com/nisnaker/hexo-theme-nisnaker" target="_blank">Nisnaker</a>
 		</span>
 	</div>

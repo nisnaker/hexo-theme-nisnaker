@@ -1,7 +1,7 @@
 {% macro render(is_post) %}
 
 {% if is_post %}
-<dl class="shadowbox">
+<dl class="shadowbox qrcodebox">
 	<dt>{{ __('side.qrcode') }}</dt>
 	<dd class="qrcode"></dd>
 </dl>
