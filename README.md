@@ -22,7 +22,7 @@ hexo的主config配置文件 hexo/_config.yml：
 # 邮箱
 email: nisnaker@gmail.com
 # 语言，目前就一种。。。
-language: zh-Hans
+language: zh-cn
 
 # 归档页面分页
 archive_generator:
