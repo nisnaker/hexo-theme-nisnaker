@@ -31,9 +31,7 @@
 
 <dl class="shadowbox cate">
 	<dt>{{ __('side.cates') }}</dt>
-		{% for cate in site.categories.sort('name') %}
-		<dd><a href="{{ url_for(cate.path) }}">{{ cate.name }} ({{ cate.posts.length }})</a></dd>
-		{% endfor %}
+	{{ list_categories() }}
 </dl>
 
 {% if is_post %}

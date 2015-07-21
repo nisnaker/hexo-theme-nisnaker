@@ -306,8 +306,21 @@ a:hover {
 	border-bottom: 1px solid #eee;
 }
 
-.side dd {
+.side dd , li.category-list-item {
 	padding: 5px 10px;
+	list-style: none;
+}
+
+ul.category-list-child {
+	padding-left: 10px;
+}
+
+span.category-list-count::before {
+	content: ' (';
+}
+
+span.category-list-count::after {
+	content: ') ';
 }
 
 .side ol {

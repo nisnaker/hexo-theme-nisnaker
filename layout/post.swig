@@ -12,12 +12,12 @@
 		<span>{{ date(page.date, 'YYYY-MM-DD') }}</span> /
 		<span>
 			{{ __('post.cate') }} : 
-			{% if page.categories and page.categories.length %}
-			{% for cat in page.categories %}
-				<a href="{{ url_for(cat.path) }}">{{ cat.name }}</a>
-			{% endfor %}
-			{% endif %}
-		</span> /
+			{{ list_categories(page.categories, {
+				show_count: false,
+				separator: ' / ',
+				style: 'span'
+			}) }}
+		</span> ||
 		<span>
 			{{ __('post.tag') }} : 
 			{% if page.tags and page.tags.length %}
