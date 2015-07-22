@@ -26,7 +26,7 @@
 	</dd>
 </dl>
 
-<dl class="shadowbox">
+<dl class="shadowbox latest">
 	<dt>{{ __('side.recent') }}</dt>
 	{% set posts = site.posts.sort('-date') %}
 	{% for post in posts.slice('0', '10') %}

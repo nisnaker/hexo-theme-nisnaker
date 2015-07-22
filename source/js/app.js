@@ -3,7 +3,7 @@ $(function () {
 	if(!toc.length) return;
 
 	var progress = $('.progress');
-	var cate = $('.side .cate');
+	var latest = $('.side .latest');
 
 	$(document).scroll(function () {
 		var scrollTop = $(document).scrollTop();
@@ -13,7 +13,7 @@ $(function () {
 		progress.css('width', percent * 100 + '%');
 
 		// top fixed
-		var top = cate.offset().top + cate.height()
+		var top = latest.offset().top + latest.height()
 		if(scrollTop > top) {
 			toc.addClass('toc-fixed');
 		} else {
