@@ -6,10 +6,15 @@
 	<dd class="qrcode"></dd>
 </dl>
 {% else %}
-<dl class="shadowbox">
+<!--dl class="shadowbox">
 	<img src="{{ url_for(theme.img) }}/flypig.jpg" style="width:220px;height:220px;">
-</dl>
+</dl-->
 {% endif %}
+
+<dl class="shadowbox cate">
+	<dt>{{ __('side.cates') }}</dt>
+	{{ list_categories() }}
+</dl>
 
 <dl class="shadowbox">
 	<dt>{{ __('side.search') }}</dt>
@@ -29,10 +34,7 @@
 	{% endfor %}
 </dl>
 
-<dl class="shadowbox cate">
-	<dt>{{ __('side.cates') }}</dt>
-	{{ list_categories() }}
-</dl>
+
 
 {% if is_post %}
 {% set toc = toc(page.content, {"class": "nav", list_number: true}) %}
