@@ -283,7 +283,7 @@ a:hover {
 }
 
 .archive-date::before {
-	top: 13px;
+	top: 5px;
 }
 
 .archive-date:hover::before, .archive-title:hover::before {
