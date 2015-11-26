@@ -3,13 +3,16 @@
 /*li{list-style:none}*/
 
 body,textarea,select,input{
-	font-family:"Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	font-family:'PingFang SC Medium',"Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+	/*font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 微软雅黑, tahoma, arial, simsun, 宋体;*/
 	font-size:12px;
-	color:#333
+	color:#000;
 }
 
 pre, code {
 	font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+	font-size: 12px;
+	tab-size: 4;
 }
 
 body {
@@ -132,6 +135,10 @@ a:hover {
 	border-bottom: none;
 }
 
+.text, .archive {
+	font-size: 14px;
+}
+
 .text {
 	margin: 20px;
 }
@@ -148,6 +155,10 @@ a:hover {
 
 .postfoot a:hover {
 	color: #E84893;
+}
+
+.text p {
+	text-indent: 2em;
 }
 
 .text p, .text .highlight, .text ul, .text ol {
