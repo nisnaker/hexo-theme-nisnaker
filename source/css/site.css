@@ -196,11 +196,12 @@ a:hover {
 
 .text h3 {
 	font-size: 16px;
-	margin: 30px 0;
+	margin: 30px 0 0;
 }
 
 .text h4 {
 	font-size: 14px;
+	margin-bottom: 0;
 }
 
 .text ol, .text ul {
