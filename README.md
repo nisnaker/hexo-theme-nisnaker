@@ -1,7 +1,7 @@
 hexo-theme-nisnaker
 ===================
 
-一款简洁的hexo主题。[Demo](http://ls-la.me)
+一款简洁的hexo主题。
 
 ### 外观
 
